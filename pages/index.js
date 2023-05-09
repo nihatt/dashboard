@@ -14,7 +14,7 @@ const DashboardPage = () => {
     try {
       const result = await api.getUsers();
       setData(result);
-      let tempFilter = result.filter(e => e.isActive == "true")
+      let tempFilter = result.filter(e => e.isActive == true)
       setActiveUser(tempFilter.length)
       setIsLoading(false);
     } catch (error) {
